@@ -29,10 +29,12 @@ const UserInput = (props: any) => {
 					value={enteredText}
 				/>
 				<View style={styles.buttonsContainer}>
-
-					<Button title="CANCEL" color="red" onPress={clearCancelledInput} />
-
-					<Button title="Add" onPress={clearAddedInput} />
+					<View style={styles.button}>
+						<Button title="CANCEL" color="red" onPress={clearCancelledInput} />
+					</View>
+					<View style={styles.button}>
+						<Button title="Add" onPress={clearAddedInput} />
+					</View>
 				</View>
 			</View>
 		</Modal>
@@ -55,10 +57,14 @@ const styles = StyleSheet.create({
 	},
 
 	buttonsContainer: {
-		width: '40%',
+		width: '60%',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
+	},
+	button: {
+		width: '90px',
 	}
+
 });
 export default UserInput;
